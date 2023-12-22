@@ -9,7 +9,7 @@
  * 只需导出getAIchat
  */
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-const genAI = new GoogleGenerativeAI("");
+const genAI = new GoogleGenerativeAI("");// API(必填)
 /**
  * @param userRequest 用户传入的格式
  * @return response流或response
