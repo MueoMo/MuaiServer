@@ -41,7 +41,7 @@ history参数
 | role | String | user/model | 是 | 无 | 角色 |
 | parts | String | - | 是 | 无 | 聊天信息 |
 
-history格式示例,必须`role`和`parts`必须承兑出现
+history格式示例,必须`role`和`parts`必须成对出现
 且第一个必须为 `user` ，第二个必须为 `model`
 ```
 let data = [{
