@@ -5,16 +5,15 @@
  */
 
 // 服务端口 - 默认:8000
-const port = 8000;
+const Port = 8000;
 
 // 用户验证 - 默认true
-const authenTication = false;
+const AuthenTication = true;
 
-// 用户信息 - 支持多用户(但不建议！)    // 待完成
-const userInfo = { 'user1': 'pwd1', };
+// 请求密码 - 开启用户验证则启用密码 
+const RequestPassword = process.env.req_password
 
 // 是否使用流式传输 - 默认开
-const chatStream = true
+const ChatStream = true
 
-
-module.exports = {port,userInfo,authenTication,chatStream};
+module.exports = {Port,RequestPassword,AuthenTication,ChatStream};

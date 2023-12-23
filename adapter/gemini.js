@@ -1,10 +1,5 @@
 /**
- * 示例插件
- * 插件命名: ai.js(如gemini.js)
- * 必须包含
- * 格式化函数(起始函数) getAIchat
- * 获取聊天函数 getAIChatResponse
- * 流式获取AI函数 streamGetAIChatResponse
+ * AI适配器
  * 
  * 只需导出getAIchat
  */
@@ -48,7 +43,7 @@ async function getAIChatResponse(geminiReq) {
         console.log(response.text())
         return response
     } catch (error) {
-        const response = { "err": error.message }
+        const response = { err : error.message }
         return response
     }
 }
@@ -69,15 +64,13 @@ async function getAIChatstream(geminiReq) {
         });
         console.log("get message stream")
         const response = await chat.sendMessageStream(geminiReq.message);
-        console.log(response)
         console.log('return stream')
         return response;
     }
     catch (error) {
-        const response = { "err": error.message }
+        const response = { err: error.message }
         return response
     }
 
 }
-
 module.exports ={getAIchat}
