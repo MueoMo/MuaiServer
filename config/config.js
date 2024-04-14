@@ -1,19 +1,19 @@
 /**
- * MuaiServer-Dev 0.1.0
+ * Mueai-Dev 1.0.0
  * 
- * by: Mueo   2023/12/22
+ * by: Mueo   2023/12/26
  */
 
+// 监听 0.0.0.0 供外网访问 ,false则127.0.0.1
+const Listen = true
+
 // 服务端口 - 默认:8000
-const Port = 8000;
+const Port = 2333;
 
 // 用户验证 - 默认true
-const AuthenTication = true;
+const AuthenTication = false;
 
 // 请求密码 - 开启用户验证则启用密码 
-const RequestPassword = process.env.req_password
+const SeverPassword = 123
 
-// 是否使用流式传输 - 默认开
-const ChatStream = true
-
-module.exports = {Port,RequestPassword,AuthenTication,ChatStream};
+module.exports = {Port,SeverPassword,AuthenTication,Listen};
